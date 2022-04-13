@@ -1,0 +1,22 @@
+version: '3'
+services:
+  api:
+    restart: always  
+    build:
+      dockerfile: Dockerfile
+      context: ./API
+    volumes: 
+      - /app/node_modules
+      - ./API:/app
+#    ports:
+#      - '3000:3000'
+    network_mode: host
+
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: ./my-react-app
+    volumes:
+      - /app/node_modules
+      - ./my-react-app:/app
+    network_mode: host
