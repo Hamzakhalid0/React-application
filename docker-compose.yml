@@ -8,7 +8,7 @@ services:
     volumes: 
       - /app/node_modules
       - ./API:/app
-    network_mode: host
+    network_mode: bridge
 
   app:
     build:
@@ -18,4 +18,4 @@ services:
       - /app/node_modules
       - ./my-react-app:/app
       - ./my-react-app/nginx:/etc/nginx/conf.d
-    network_mode: host
+    network_mode: bridge
