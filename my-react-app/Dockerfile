@@ -2,9 +2,9 @@ FROM node:14.18.2-alpine as build
 
 COPY package*.json package-lock.json /app/
 
-RUN npm install
-
 WORKDIR /app
+
+RUN npm install
 
 COPY ./ /app/
 
