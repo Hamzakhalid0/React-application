@@ -1,6 +1,6 @@
 FROM node:14.18.2-alpine as build
 
-COPY package*.json package-lock.json /app/
+COPY package*.json /app/
 
 WORKDIR /app
 
