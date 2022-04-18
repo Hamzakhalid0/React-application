@@ -1,5 +1,12 @@
 version: '3'
 services:
+  db:
+    build: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: mydb
+    restart: always
+
   api:
     restart: always  
     build:
