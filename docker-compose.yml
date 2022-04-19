@@ -1,18 +1,18 @@
 version: '3'
 services:
-  db:
-    image: mysql:8.0.28
-    restart: always
-    container_name: mysql
-    tty: true
-    environment:
-      MYSQL_DATABASE: reactdb
-      MYSQL_USER: user
-      MYSQL_PASSWORD: pass
-      MYSQL_ROOT_PASSWORD: root
-    volumes:
-      - ./mysqldata:/var/lib/mysql/
-    network_mode: host
+#  db:
+#    image: mysql:8.0.28
+#    restart: always
+#    container_name: mysql
+#    tty: true
+#    environment:
+#      MYSQL_DATABASE: reactdb
+#      MYSQL_USER: user
+#      MYSQL_PASSWORD: pass
+#      MYSQL_ROOT_PASSWORD: root
+#    volumes:
+#      - ./mysqldata:/var/lib/mysql/
+#    network_mode: host
 
   api:
     restart: always  
